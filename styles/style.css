@@ -1,0 +1,66 @@
+/* =========================
+    VARIABLES
+========================= */
+:root {
+  --light-text-color: #f0f0f0f0;
+  --dark-text-color: #000;
+  --secondary-color: #62d6e8;
+  --secondary-interface-color: #283444;
+}
+
+/* =========================
+    GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif !important;
+}
+
+.main-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.pointer-a {
+  all: unset; 
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pointer-a:hover,
+.pointer-a:focus,
+.pointer-a:active {
+  text-decoration: none;
+  color: var(--dark-text-color);
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none !important;
+}

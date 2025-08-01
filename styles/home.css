@@ -1,0 +1,215 @@
+/* =========================
+    SLIDER SECTION
+========================= */
+
+/* === Section === */
+.slider-section {
+  position: relative;
+}
+
+/* === Slider navigation === */
+.slider-nav {
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider-nav:hover {
+  background-color: #eaeaea;
+}
+
+.prev-slide {
+  left: 0;
+}
+
+.next-slide {
+  right: 0;
+}
+
+/* === Slide === */
+.slide {
+  border-radius: 25px;
+}
+
+.slide.purple_slide {
+  background: linear-gradient(135deg, #9378d2 0%, #7e63bd 50%, #494375 100%);
+}
+
+.slide.red_slide {
+  background: linear-gradient(to right, #1a1a1a 0%, #333333 70%, #800000 100%);
+}
+
+/* === Slide text === */
+.slider-text-block {
+  text-align: left;
+}
+
+.slider-text {
+  color: var(--light-text-color);
+}
+
+.slider-text-main {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.slider-text-secondary {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.slider-text-special {
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #FFD700;
+}
+
+.slider-text-special.orange {
+  color: #FFD700;
+}
+
+.slider-text-special.red {
+  color: #c51c0d;
+}
+
+/* === Slide Image === */
+.image-container {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* === SHOP BTN === */
+.shop-btn {
+  background-color: white;
+  font-weight: bold;
+  padding: 10px 32px;
+  border-radius: 12px;
+  font-size: 20px;
+  max-width: 250px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.shop-btn.light {
+  color: #6c8ae4;
+}
+
+.shop-btn.red {
+  color: #c42422;
+}
+
+.shop-btn:hover,
+.shop-btn:focus {
+  background-color: #f0f0f0;
+  text-decoration: none;
+}
+
+
+/* === ADAPTIVE (≤ 992px) === */
+@media (max-width: 992px) {
+  .slider-text-special {
+    font-size: 30px;
+  }
+
+  .slider-text-main {
+    font-size: 25px;
+  }
+
+  .slider-text-secondary {
+    font-size: 20px;
+  }
+
+  .image-container {
+    height: 350px;
+  }
+}
+
+/* === ADAPTIVE (≤ 768px) === */
+@media (max-width: 768px) {
+  .slider-text-block {
+    text-align: center;
+  }
+
+  .slider-text-special {
+    font-size: clamp(28px, 5vw, 40px);
+  }
+
+  .slider-text-main {
+    font-size: clamp(32px, 6vw, 48px);
+  }
+
+  .slider-text-secondary {
+    font-size: clamp(16px, 3.5vw, 24px);
+  }
+
+  .image-container {
+    height: 280px;
+  }
+  
+  .shop-btn {
+    margin: auto;
+    font-size: clamp(15px, 5vw, 20px);
+    text-align: center;
+  }
+}
+
+/* === ADAPTIVE (≤ 576px) === */
+@media (max-width: 576px) {
+  .image-container {
+    height: 200px;
+  }
+}
+
+/* =========================
+    FEATURES SECTION
+========================= */
+.slider-and-features-section {
+  background-color: #F5F8FB;
+}
+.features-icons {
+  border-radius: 25px;
+}
+
+.features-icons .col-12:not(:last-child) {
+  border-right: 1px solid #dee2e6;
+}
+
+@media (max-width: 576px) {
+  .features-icons .col-12:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+}

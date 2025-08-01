@@ -11,30 +11,139 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
 </head>
 
 <body>
 
-    <script>
-    // Add Header
-    fetch('/pages/layout/header.html')
-        .then(response => response.text())
-        .then(html => {
-        document.body.insertAdjacentHTML('afterbegin', html);
-        });
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-    // Add Footer
-    fetch('/pages/layout/footer.html')
-        .then(response => response.text())
-        .then(html => {
-        document.body.insertAdjacentHTML('beforeend', html);
+    <script>
+        $(document).ready(function () {
+            // main-slider
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 600,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                prevArrow: $('.prev-slide'),
+                nextArrow: $('.next-slide'),
+                arrows: true,
+            });
         });
     </script>
 
-    <div>
-        <h1>Welcome</h1>
-    </div>
+    <script>
+        // Add Header
+        fetch('/pages/layout/header.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('afterbegin', html);
+            });
+
+        // Add Footer
+        fetch('/pages/layout/footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
+
+
+    <!-- Slider and Benefits -->
+    <section class="slider-and-features-section">
+        <section class="slider-section py-4 main-container">
+
+            <!-- Btns -->
+            <button class="slider-nav prev-slide" type="button">‹</button>
+            <button class="slider-nav next-slide" type="button">›</button>
+
+            <div class="slider">
+                <!-- Slide 1 -->
+                <div class="px-4 py-3 slide purple_slide">
+                    <div class="row px-4">
+                        <div
+                            class="col-12 col-md-5 d-flex flex-column justify-content-center slider-text-block mb-4 mb-lg-0">
+                            <h2 class="slider-text slider-text-special orange mb-2">Кращі ціни!</h2>
+                            <h1 class="slider-text slider-text-main">Преміальні ноутбуки з США!</h1>
+                            <p class="slider-text slider-text-secondary">Максимум потужності. Мінімум компромісів.</p>
+                            <a href="#" class="shop-btn light">КУПИТИ ЗАРАЗ</a>
+                        </div>
+                        <div class="col-12 col-md-7 image-container">
+                            <img src="/content/home-slider/laptop.png" alt="Samsung Galaxy S7" class="slider-image" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="px-4 py-3 slide red_slide">
+                    <div class="row px-4">
+                        <div
+                            class="col-12 col-md-5 d-flex flex-column justify-content-center slider-text-block mb-4 mb-lg-0">
+                            <h2 class="slider-text slider-text-special red mb-2">Шалені ціни!</h2>
+                            <h1 class="slider-text slider-text-main">Ігрові ноутбуки та ПК з США!</h1>
+                            <p class="slider-text slider-text-secondary">Зроблено для геймерів. Домінуй у кожній грі.
+                            </p>
+                            <a href="#" class="shop-btn red">КУПИТИ ЗАРАЗ</a>
+                        </div>
+                        <div class="col-12 col-md-7 image-container">
+                            <img src="/content/home-slider/something-cool.png" alt="Samsung Galaxy S7"
+                                class="slider-image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section main-container pb-4">
+            <div class="bg-white px-4 py-3 shadow features-icons">
+                <div class="row text-center">
+
+                    <!-- Block 1 -->
+                    <div class="col-12 col-sm">
+                        <img src="/content/benefits-icons/return_image.png" alt="Money Return" class="mb-2" width="40">
+                        <h6 class="mb-1">Money Back</h6>
+                        <p class="mb-0 small text-muted">Money Back протягом 3х днів</p>
+                    </div>
+
+                    <!-- Block 2 -->
+                    <div class="col-12 col-sm">
+                        <img src="/content/benefits-icons/shipped_image.png" alt="Free Shipping" class="mb-2" width="40">
+                        <h6 class="mb-1">Безкоштовна доставка</h6>
+                        <p class="mb-0 small text-muted">Безкоштовна доставка замовлень більше 2000грн</p>
+                    </div>
+
+                    <!-- Block 3 -->
+                    <div class="col-12 col-sm">
+                        <img src="/content/benefits-icons/support_image.png" alt="Online Support" class="mb-2"
+                            width="40">
+                        <h6 class="mb-1">Постійна підтримка</h6>
+                        <p class="mb-0 small text-muted">Дзвоніть протягом дня за будь якими запитанням щодо товару</p>
+                    </div>
+
+                    <!-- Block 4 -->
+                    <div class="col-12 col-sm">
+                        <img src="/content/benefits-icons/united-states-flag-icon.png" alt="Member Discount" class="mb-2"
+                            width="40">
+                        <h6 class="mb-1">Техніка з США</h6>
+                        <p class="mb-0 small text-muted">Перевірена техніка з США</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
 
 </body>

@@ -445,3 +445,88 @@
 .price {
   font-size: 18px;
 }
+
+/* =========================
+   BLOG SLIDER
+========================= */
+
+.blog-slide {
+  height: 100%;
+}
+
+.blog-card-slider {
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.blog-slider .slick-slide {
+  padding: 0 1rem;
+}
+
+.blog-slider .slick-list {
+  margin: 0 -1rem;
+}
+
+.blog-slider .slick-slide {
+  padding-right: 1rem; 
+}
+
+.blog-slider .slick-list {
+  margin-right: -1rem;
+}
+
+/* Кнопки слайдера блога */
+.prev-slide-blog,
+.next-slide-blog {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.prev-slide-blog {
+  left: 0;
+}
+
+.next-slide-blog {
+  right: 0;
+}
+
+.prev-slide-blog:hover,
+.next-slide-blog:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.blog-links-section {
+  position: relative;
+  overflow: visible;
+}
+
+.blog-slider {
+  position: relative;
+}
+
+.blog-preview {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.blog-card-slider:hover .blog-preview {
+  transform: scale(1.05);
+}

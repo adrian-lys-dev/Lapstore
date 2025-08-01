@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/catalog.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <script>
+        // Add Header
+        fetch('/pages/layout/header.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('afterbegin', html);
+            });
+
+        // Add Footer
+        fetch('/pages/layout/footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
+
+    <section class="breadcrumbs-section">
+        <div class="main-container">
+            <nav class="breadcrumbs">
+                <a href="#">Головна</a> /
+                <span>FAQ</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="blog-list-section">
+        <div class="main-container pt-3 px-4">
+            <h2 class="section-title mb-3">FAQ</h2>
+    
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc1" hidden>
+                    <label class="accordion-header" for="acc1">
+                        Чи є гарантія?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Ноутбуки вживані, відповідно, гарантії від виробника немає. Ми даємо 3 місяці гарантії від магазину. Якщо вживаний товар працює без нарікань протягом цього часу і не знайшлися нюанси або приховані дефекти, значить вважаємо товар абсолютно працездатний.
+                        </p>
+                        <p>
+                            У магазинах, де на вживану техніку дають більше гарантію, зазвичай ціни вище, тому по суті гарантія включена у вартість товару, і не факт, якщо щось трапиться, що ваш випадок визнають гарантійним. Тобто ви спочатку платите за несправність, яка ще не сталася, яку можливо вам і не компенсують.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc2" hidden>
+                    <label class="accordion-header" for="acc2">
+                        Чи можна повернути товар?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Протягом 3 днів можна повернути товар навіть, якщо просто не сподобався, без пояснення причин. Звісно протягом цього терміну не бити, не ламати, водою не заливати і т.п.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc3" hidden>
+                    <label class="accordion-header" for="acc3">
+                        Який стан ноутбука, чи є дефекти, зколи, тріщини?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Оцінка косметичного стану є в описі. Оцінка суб’єктивна, але приблизно можна зрозуміти, наприклад 9 з 10 означає, що стан дуже добрий, але сліди використання є.
+                        </p>
+                        <p>
+                            Фото в об’явах реальні. Фото зроблені з різних стандартних ракурсів, якщо є косметичні нюанси, вони вказані в описі і їх можна побачити на фото, якщо потрібно робляться фото відмінні від стандартних щоб вказати нюанси конкретного екземпляра.
+                        </p>
+                        <p>
+                            Додаткові фото не робимо. Краще або гірше того що ви бачите на фото, & nbsp; товар не стане. Якщо вказано що є потертості від використання, це вказує на загальний стан, а не те що протерта саме якась певна точка.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc4" hidden>
+                    <label class="accordion-header" for="acc4">
+                        Чи все в порядку, чи ремонтувався, чи відкривався?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Ноутбуки привезені з США, вони не ремонтуються. Ноутбуки відкриваються для чищення та зміни конфігурації (пам’ять, накопичувачі), це нормальний процес обслуговування.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc5" hidden>
+                    <label class="accordion-header" for="acc5">
+                        Замовляв в іншому місці, прислали з іншими характеристиками, не те що в оголошенні. У вас таке буває?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Кожен ноутбук у нас обробляється і виставляється окремо. Фото і опис саме конкретно одного ноутбука, відповідно всі характеристики: процесор, пам’ять, екран, сканер відбитка і т.д. вказані саме для цього екземпляру, а не взяті з описів в інтернеті.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc6" hidden>
+                    <label class="accordion-header" for="acc6">
+                        Читав опис в інтернеті, а у вас ця модель з іншим процесором, відеокартою, екраном. Ви що їх спеціально поміняли?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Дуже часто одна і та сама модель може сильно відрізнятися комплектацією, хоча називатися абсолютно однаково. Зазвичай, це бізнес серії типу Dell Latitude, HP Elitebook, Lenovo ThinkPad, Dell Precision, у них комплектації можуть відрізнятися в рази за вартістю. Наприклад, в базовій комплектації: процесор Core i5, HD екран, накопичувач HDD, а в топовій конфігурації: процесор Core i7, Full HD екран, накопичувач SSD. Також можуть відрізнятися і доп компоненти: камера, підсвічування клавіатури, сканер відбитка і т.д. Тому читайте уважно опис кожної моделі, комплектація може відрізнятися від того, що ви могли бачити в інтернет-оглядах.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc7" hidden>
+                    <label class="accordion-header" for="acc7">
+                        Що йде в комплекті?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            У комплекті зазвичай йде ноутбук, зарядний пристрій, наклейки на клавіатуру з кирилицею. Ноутбуки привезені з США, тому коробок, паперів, документів з ними зазвичай немає. Накопичувач, оперативна пам’ять, батарея і т.д. йдуть в комплекті, і вже включені у вартість, ноутбуки повністю готові до роботи.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc8" hidden>
+                    <label class="accordion-header" for="acc8">
+                        Якщо ноутбук з США чи нормально він буде працювати з нашими програмами або буде все англійською?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Все програмне забезпечення встановлено вже з нашими мовними параметрами, все буде працювати як потрібно. Різниці в порівнянні з новими ноутбуками купленими в Україні абсолютно ніякої. Англійська клавіатура змінюється на кирилицю або наклейками (йдуть в комплекті) або лазерним гравіюванням (робиться окремо не у нас, контакти даємо).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc9" hidden>
+                    <label class="accordion-header" for="acc9">
+                        Навіщо берете передоплату якщо відправка післяплатою? Я хочу оплатити тільки після того як побачу товар.
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Умови оплати та доставки дивіться на сторінці Інформація. Мінімальну передоплату беремо, як запоруку вашого серйозного ставлення до покупки, і як гарантію того, що ви прийдете забирати посилку на Нову пошту. У разі, якщо ви передумаєте, не прийдете, у вас зміняться плани, нам доведеться оплачувати за повернення посилки транспортування в 2 сторони (туди і назад), тому без мінімальної передоплати НЕ відправляємо.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc10" hidden>
+                    <label class="accordion-header" for="acc10">
+                        Ноутбук коштує хххх грн. а на Новій пошті суму просять більше, як так виходить?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            При замовленні доставки післяплатою, враховуйте комісії і оплати які бере Нова пошта.
+                        </p>
+                        <p>
+                           1. Власне транспортування (зазвичай 70-140 грн) 
+                        </p>
+                        <p>
+                            2. Комісія за переказ грошей післяплатою (залежить від вартості товару, зазвичай 100-300 грн.)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc11" hidden>
+                    <label class="accordion-header" for="acc11">
+                        У які дні у вас надходження?
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="accordion-content">
+                        <p>
+                            Як такого дня надходження у нас немає, нові надходження практично кожен робочий день. Кожен день тестуються і виставляються на продаж кілька нових ноутбуків, переглядайте на головній сторінці є блок Нові надходження, також можна моніторити новинки в нашому Instagram.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    
+        </div>
+    </section>
+
+</body>

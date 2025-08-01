@@ -42,6 +42,58 @@
                 nextArrow: $('.next-slide'),
                 arrows: true,
             });
+
+            // new-arrivals-slider
+            $('.new-arrivals-slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: { slidesToShow: 3 }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: { slidesToShow: 2 }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: { slidesToShow: 1 }
+                    }
+                ],
+                prevArrow: $('.prev-slide-product'),
+                nextArrow: $('.next-slide-product'),
+                arrows: true,
+
+            });
+
+            // best-prop-slider
+            $('.best-prop-slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: { slidesToShow: 3 }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: { slidesToShow: 2 }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: { slidesToShow: 1 }
+                    }
+                ],
+                prevArrow: $('.prev-slide-best-prop'),
+                nextArrow: $('.next-slide-best-prop'),
+                arrows: true,
+
+            });
         });
     </script>
 
@@ -167,6 +219,352 @@
                 </a>
             </div>
         </div>
+    </section>
+
+    <!-- New Arrivals Product Slider -->
+    <section class="main-container new-arrivals">
+        <h2 class="section-title mb-4">Нові надходження</h2>
+
+        <!-- Btns -->
+        <button class="prev-slide-product" type="button">‹</button>
+        <button class="next-slide-product" type="button">›</button>
+
+        <div class="new-arrivals-slider">
+            <!-- Product 1 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="#">
+                            <img src="/content/products/Dell XPS 15 9510 (1).jpg" alt="/content/products/empty/not-found-product.png"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center">
+                        <a class="pointer-a" href="#">
+                            Dell XPS 15 9510
+                        </a>
+                </h5>
+                    <strong class="mb-3 text-center price">₴22 999</strong>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="#">
+                            <img src="/content/products/Microsoft Surface Laptop 3 (1).jpg" alt="product"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center">
+                        <a class="pointer-a" href="#">
+                            Microsoft Surface Laptop 3
+                        </a>
+                    </h5>
+                    <strong class="mb-3 text-center price">₴17 999</strong>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href=""> <img src="/content/products/MSI Katana (1).jpg" alt="Product1"
+                                class="img-fluid rounded product-slider-picture"></a>
+
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center">
+                        <a class="pointer-a" href="#">
+                            MSI Katana
+                        </a>
+                    </h5>
+                    <strong class="mb-3 text-center price">₴17 999</strong>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="#">
+                            <img src="/content/products/Dell Latitude 5511 (1).jpg" alt="Product1"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center">
+                        <a class="pointer-a" href="#">
+                            Dell Latitude 5511
+                        </a>
+                    </h5>
+                    <strong class="mb-3 text-center price">₴17 999</strong>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="">
+                            <img src="/content/products/Microsoft Surface Pro 7 (1).jpg" alt="Product1"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center">
+                        <a class="pointer-a" href="#">
+                            Microsoft Surface Pro 7
+                        </a>
+                    </h5>
+                    <strong class="mb-3 text-center price">₴12 999</strong>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Best Props Product Slider -->
+    <section class="main-container best-prop">
+        <h2 class="section-title mb-4">Найвигідніша пропозиція</h2>
+
+        <!-- Btns -->
+        <button class="prev-slide-best-prop" type="button">‹</button>
+        <button class="next-slide-best-prop" type="button">›</button>
+
+        <div class="best-prop-slider">
+            <!-- Product 1 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="#">
+                            <img src="/content/products/Dell Inspiron 16 7620 2-in-1 (1).jpg" alt="Product1"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center"><a class="pointer-a" href="#">Dell Inspiron 16
+                            7620</a></h5>
+                    <div class="text-center mb-3">
+                        <del class="text-muted me-2">₴27 999</del>
+                        <strong class="price">₴16 999</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="#">
+                            <img src="/content/products/Dell Latitude 5540 (1).jpg" alt="Product1"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center"><a class="pointer-a" href="#">Dell Latitude
+                            5540</a></h5>
+                    <div class="text-center mb-3">
+                        <del class="text-muted me-2">₴19 999</del>
+                        <strong class="price">₴12 999</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="#">
+                            <img src="/content/products/Dell Latitude 7520 (1).jpg" alt="Product1"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center"><a class="pointer-a" href="#"></a>Dell Latitude
+                        7520</h5>
+                    <div class="text-center mb-3">
+                        <del class="text-muted me-2">₴12 999</del>
+                        <strong class="price">₴11 999</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="">
+                            <img src="/content/products/Microsoft Surface Pro 7 (1).jpg" alt="Product1"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center"><a class="pointer-a" href="#">Microsoft Surface
+                            Pro 7</a></h5>
+                    <div class="text-center mb-3">
+                        <del class="text-muted me-2">₴21 999</del>
+                        <strong class="price">₴17 999</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="mb-4 mt-1">
+                <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                    <div class="image-wrapper mb-3">
+                        <a href="#">
+                            <img src="/content/products/Dell Latitude E6440 (1).jpg" alt="Product1"
+                                class="img-fluid rounded product-slider-picture">
+                        </a>
+                        <div class="buttons-overlay">
+                            <a href="#" title="Купити" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                </svg>
+                            </a>
+                            <a href="#" title="Додати в обране" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                    <path
+                                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h5 class="text-dark text-semibold mb-1 text-center"><a class="pointer-a" href="#">Dell Latitude
+                            E6440</a></h5>
+                    <div class="text-center mb-3">
+                        <del class="text-muted me-2">₴12 999</del>
+                        <strong class="price">₴7 999</strong>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </section>
 
 </body>

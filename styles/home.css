@@ -293,3 +293,155 @@
     margin-bottom: 0;
   }
 }
+
+/* =========================
+   PRODUCT SLIDER
+========================= */
+
+.new-arrivals,
+.best-prop,
+.blog-slider {
+  position: relative;
+}
+
+.prev-slide-product,
+.next-slide-product,
+.prev-slide-best-prop,
+.next-slide-best-prop {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.prev-slide-product {
+  left: 0;
+}
+
+.next-slide-product {
+  right: 0;
+}
+
+.prev-slide-best-prop {
+  left: 0;
+}
+
+.next-slide-best-prop {
+  right: 0;
+}
+
+.prev-slide-product:hover,
+.next-slide-product:hover,
+.prev-slide-best-prop:hover,
+.next-slide-best-prop:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* === Product card container === */
+.product-card-slider {
+  border-radius: 25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 100%;
+  padding: 10px;
+}
+
+/* === Image wrapper === */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.product-slider-picture {
+  display: block;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+/* === Hover buttons overlay === */
+.buttons-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px;
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+.product-card-slider:hover .buttons-overlay {
+  opacity: 1;
+}
+
+.buttons-overlay a.btn-icon {
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.buttons-overlay a.btn-icon:hover {
+  background-color: #3ac1d8;
+}
+
+.buttons-overlay a.btn-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+.new-arrivals-slider .slick-slide {
+  padding: 0 1rem;
+}
+
+.new-arrivals-slider .slick-list {
+  margin: 0 -1rem;
+}
+
+.new-arrivals-slider .slick-slide {
+  padding-right: 1rem; 
+}
+
+.new-arrivals-slider .slick-list {
+  margin-right: -1rem;
+}
+
+.best-prop-slider .slick-slide {
+  padding: 0 1rem;
+}
+
+.best-prop-slider .slick-list {
+  margin: 0 -1rem;
+}
+
+.best-prop-slider .slick-slide {
+  padding-right: 1rem; 
+}
+
+.best-prop-slider .slick-list {
+  margin-right: -1rem;
+}
+
+/* === Price === */
+.price {
+  font-size: 18px;
+}

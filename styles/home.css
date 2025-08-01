@@ -213,3 +213,83 @@
     padding-bottom: 1rem;
   }
 }
+
+/* =========================
+    PRODUCT SECTION
+========================= */
+.product-section {
+  background: white;
+}
+
+/* === Category block === */
+.cat-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  color: #fff;
+  height: 200px;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* Reset */
+.cat-block,
+.cat-block:visited,
+.cat-block:hover,
+.cat-block:focus,
+.cat-block:active,
+.cat-block:hover h5,
+.cat-block:hover p {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Category background */
+.cat-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+/* Background for each category */
+.cat-block.acc::before {
+  background-image: url('/content/caterogy-background/accessories.jpg');
+}
+
+.cat-block.laptop::before {
+  background-image: url('/content/caterogy-background/laptop.jpg');
+}
+
+.cat-block.pc::before {
+  background-image: url('/content/caterogy-background/pc.jpg');
+}
+
+/* Hover ефект: збільшення фону */
+.cat-block:hover::before {
+  transform: scale(1.1);
+}
+
+/* Content above background */
+.cat-block > * {
+  position: relative;
+  z-index: 1;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+/* === ADAPTIVE (≤ 768px) === */
+@media (max-width: 768px) {
+  .row > .col-12 {
+    margin-bottom: 1.5rem;
+  }
+
+  .row > .col-12:last-child {
+    margin-bottom: 0;
+  }
+}

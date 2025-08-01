@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <script>
+        // Add Header
+        fetch('/pages/layout/header.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('afterbegin', html);
+            });
+
+        // Add Footer
+        fetch('/pages/layout/footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
+
+    <section class="breadcrumbs-section">
+        <div class="main-container">
+            <nav class="breadcrumbs">
+                <a href="#">Головна</a> /
+                <span>Розстрочка</span>
+            </nav>
+        </div>
+    </section>
+    
+    <section class="installment-list-section">
+        <div class="main-container pt-3 px-4">
+            <h2 class="section-title mb-3">Розстрочка</h2>
+
+            <div class="row mb-5 align-items-start">
+                <div class="col-lg-4 mb-3 mb-lg-0 text-center">
+                    <img src="/content/installment/main.png" alt="Оплата частинами" class="img-fluid rounded">
+                </div>
+
+                <div class="col-lg-8">
+                    <h4>Розстрочка Приватбанку</h4>
+                    <p>
+                        У нашому магазині доступна оплата через миттєву розстрочку від Приватбанку.
+                        Розстрочка доступна при наявності карти Приватбанку і відповідного ліміту на ній. Кількість платежів ви можете
+                        вибирати самостійно до 24 місяців.
+                        <strong>
+                            Комісія складає 1,9% від загальної суми за кожен платіж (може мінятися банком, краще уточніть на момент
+                            оформлення).
+                        </strong>
+                    </p>
+                    <p>
+                        Доступні 2 варіанти:
+                        <strong>
+                            Оплата картою Приватбанку в магазині та
+                            О плата дистанційно через Приват24 за посиланням.
+                        </strong>
+                        Детально і покроково по кожному варіанту
+                    </p>
+                </div>
+                </div>
+
+    
+            <div class="row mb-5 align-items-start">
+                <div class="col-lg-4 mb-3 mb-lg-0 text-center">
+                    <img src="/content/installment/first.jpeg" alt="Оплата частинами" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-8">
+                    <h4 class="mb-2">Оплата картою Приватбанку в магазині</h4>
+                    <ol class="px-4">
+                        <li>Отримайте карту Приватбанку (зверніться до найближчого відділення або зателефонуйте 3700)</li>
+                        <li>Дізнайтеся максимальну суму покупки по сервісу “Оплата частинами” будь-яким зручним для вас способом (SMS з текстом chast на номер 10060, через Приват24, через додаток “Оплата частинами”, зателефонувавши по телефону 3700).</li>
+                        <li>Приходьте в магазин, вибирайте товар</li>
+                        <li>Продавець набирає на терміналі суму і кількість платежів.</li>
+                        <li>Оплачуєте карткою Приватбанку.</li>
+                        <li>Підписуєте чек, який є договором.</li>
+                        <li>Забираєте товар.</li>
+                    </ol>
+                </div>
+            </div>
+    
+            <div class="row mb-5 align-items-start">
+                <div class="col-lg-4 mb-3 mb-lg-0 text-center">
+                    <img src="/content/installment/second.jpeg" alt="Кредит онлайн" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-8">
+                    <h4 class="mb-2">Оплата дистанційно через Приват24 за посиланням</h4>
+                    <ol class="px-4">
+                        <li>Отримайте карту Приватбанку (зверніться до найближчого відділення або зателефонуйте 3700).</li>
+                        <li>Дізнайтеся максимальну суму покупки по сервісу “Оплата частинами” будь-яким зручним для вас способом (SMS з текстом chast на номер 10060, через Приват24, через додаток “Оплата частинами”, зателефонувавши по телефону 3700).</li>
+                        <li>Вибирайте товар на сайті.</li>
+                        <li>Звертайтеся, зручним вам способом (телефон, чат, Viber, Telegram, Instagram, можна просто зробити замовлення через кошик, контакти є і у верхній частині сторінки і знизу)</li>
+                        <li>Погоджуйте кількість платежів, повідомляєте координати для відправки товару.</li>
+                        <li>Оператор висилає вам посилання на оплату зручним для вас способом (e-mail, чат, Viber, Telegram, Instagram)</li>
+                        <li>Переходьте за посиланням і оплачуєте через Приват24.</li>
+                        <li>Повідомляєте про оплату.</li>
+                        <li>Отримуєте номер ТТН і очікуєте ваш товар.</li>
+                    </ol>
+                    <p>
+                        Додатково можете подивитися на <strong>сайті Приватбанку</strong> або дізнавайтеся у відділеннях і по телефону 3700.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row mb-5 align-items-start">
+                <div class="col-lg-4 mb-3 mb-lg-0 text-center">
+                    <img src="/content/installment/why.png" alt="Покупка без переплат" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-8">
+                    <h4 class="mb-2">Чому немає Оплати частинами (без відсотків)?</h4>
+                    <p>
+                        При оплаті частинами через Приватбанк, відсотки і комісії платить торгова точка. Наприклад ви купуєте товар за 10
+                        000 через Оплату частинами, а торгова точка отримує 8 000 , а 2 000 комісії отримує банк (цифри наведені приблизні,
+                        можуть відрізнятися в залежності від кількості платежів, суми і т.д.). Відповідно, щоб нічого не втрачати, за товар
+                        який коштує 10 000 , магазин ставить ціну 12 000 .
+                        Іноді звичайно магазини можуть ставити безвідсоткову оплату частинами на товар в якості знижки. Але в будь-якому
+                        випадку, перевіряйте вартість аналогічних товарів на інших сайтах, часто буває що різниця в ціні на безкоштовній
+                        розстрочці набагато вище відсотків які ви переплатите за розстрочку з відсотками.
+                    </p>
+                </div>
+            </div>
+    
+    
+        </div>
+    </section>
+
+</body>

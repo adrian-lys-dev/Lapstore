@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/catalog.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+</head>
+
+<body>
+
+    <script>
+        // Add Header
+        fetch('/pages/layout/header.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('afterbegin', html);
+            });
+
+        // Add Footer
+        fetch('/pages/layout/footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs-section">
+        <div class="main-container">
+            <nav class="breadcrumbs">
+                <a href="#">Головна</a> /
+                <span>Каталог</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="catalog-section">
+        <div class="main-container py-2">
+            <div class="row">
+
+                <!-- Filters -->
+                <div class="col-12 col-lg-3 mb-3 mb-lg-0 d-none d-lg-block">
+                    <div class="filters">
+                        <div class="d-flex justify-content-between">
+                            <h2 class="section-title mb-3">Фільтри</h2>
+                            <button class="filter-toggle-btn" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e3e3e3">
+                                    <path
+                                        d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z" />
+                                </svg>
+                            </button>
+
+                        </div>
+                        <div class="filters-container">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="acc1" hidden checked>
+                                    <label class="accordion-header" for="acc1">
+                                        Процесори
+                                        <span class="arrow">&#9662;</span>
+                                    </label>
+                                    <div class="accordion-content">
+                                        <label><input type="checkbox"> Intel Сore i3 (2)</label><br>
+                                        <label><input type="checkbox"> Intel Сore i5 (9)</label><br>
+                                        <label><input type="checkbox"> Intel Core i7 (10)</label><br>
+                                        <label><input type="checkbox"> Intel Core i9 (2)</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="acc2" hidden checked>
+                                    <label class="accordion-header" for="acc2">
+                                        Відеокарта
+                                        <span class="arrow">&#9662;</span>
+                                    </label>
+                                    <div class="accordion-content">
+                                        <label><input type="checkbox"> Intel UHD (2)</label><br>
+                                        <label><input type="checkbox"> Intel Iris (9)</label><br>
+                                        <label><input type="checkbox"> NVIDIA RTX 3050 (10)</label><br>
+                                        <label><input type="checkbox"> NVIDIA RTX 3060 (2)</label><br>
+                                        <label><input type="checkbox"> NVIDIA RTX 3070 (1)</label><br>
+                                        <label><input type="checkbox"> NVIDIA RTX 4050 (12)</label><br>
+                                        <label><input type="checkbox"> NVIDIA RTX 4060 (2)</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="acc3" hidden checked>
+                                    <label class="accordion-header" for="acc3">
+                                        Накопичувач
+                                        <span class="arrow">&#9662;</span>
+                                    </label>
+                                    <div class="accordion-content">
+                                        <label><input type="checkbox"> SSD 256 Gb (2)</label><br>
+                                        <label><input type="checkbox"> SSD 500 Gb (9)</label><br>
+                                        <label><input type="checkbox"> SSD 512 Gb (1)</label><br>
+                                        <label><input type="checkbox"> SSD 1 Tb (1)</label><br>
+                                        <label><input type="checkbox"> SSD 10 Tb (10)</label><br>
+                                        <label><input type="checkbox"> SSD 512 Gb + HDD 1 Tb (2)</label><br>
+                                        <label><input type="checkbox"> HDD 1 Tb (1)</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="acc4" hidden checked>
+                                    <label class="accordion-header" for="acc4">
+                                        Наявність
+                                        <span class="arrow">&#9662;</span>
+                                    </label>
+                                    <div class="accordion-content">
+                                        <label><input type="checkbox"> В наявності(2)</label><br>
+                                        <label><input type="checkbox"> Заброньовано (9)</label><br>
+                                        <label><input type="checkbox"> Відсутнє (1)</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catalog info -->
+                <div class="col-12 col-lg-9">
+                    <div class="products">
+                        <div class="d-flex justify-content-between mb-3 mb-lg-0">
+                            <h2 class="section-title mb-3">Каталог</h2>
+                            <label for="filter-menu-toggle" class="d-lg-none mobile-filters-btn">
+                                Фільтри
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#000000">
+                                    <path
+                                        d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z" />
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="paging-sorting-container mb-3">
+                            <p class="paging-info">Показується 1-10 з 20 результатів</p>
+
+                            <div class="sort-selector">
+                                <select id="sort-options" class="form-select">
+                                    <option value="abs">Сортування за замовчуванням</option>
+                                    <option value="price-asc">Ціною: за зростанням</option>
+                                    <option value="price-desc">Ціною: за спаданням</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <!-- Products -->
+                        <div class="product-grid">
+                            <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                                <div class="image-wrapper mb-3">
+                                    <a href="#">
+                                        <img src="/content/products/Dell Latitude E6440 (1).jpg" alt="Product1"
+                                            class="img-fluid rounded product-slider-picture">
+                                    </a>
+                                    <div class="buttons-overlay">
+                                        <a href="#" title="Купити" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" title="Додати в обране" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h5 class="text-dark text-semibold mb-1 text-center">
+                                    <a class="pointer-a" href="#">Dell
+                                        Latitude
+                                        E6440
+                                    </a>
+                                </h5>
+                                <div class="text-center mb-3">
+                                    <del class="text-muted me-2">₴12 999</del>
+                                    <strong class="price">₴7 999</strong>
+                                </div>
+                            </div>
+                            <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                                <div class="image-wrapper mb-3">
+                                    <a href="#">
+                                        <img src="/content/products/Dell XPS 15 9510 (1).jpg" alt="Product1"
+                                            class="img-fluid rounded product-slider-picture">
+                                    </a>
+                                    <div class="buttons-overlay">
+                                        <a href="#" title="Купити" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" title="Додати в обране" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h5 class="text-dark text-semibold mb-1 text-center">
+                                    <a class="pointer-a" href="#">
+                                        Dell XPS 15 9510
+                                    </a>
+                                </h5>
+                                <div class="text-center mb-3">
+                                    <strong class="price">₴17 999</strong>
+                                </div>
+                            </div>
+                            <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                                <div class="image-wrapper mb-3">
+                                    <a href="#">
+                                        <img src="/content/products/Microsoft Surface Laptop 3 (1).jpg" alt="Product1"
+                                            class="img-fluid rounded product-slider-picture">
+                                    </a>
+                                    <div class="buttons-overlay">
+                                        <a href="#" title="Купити" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" title="Додати в обране" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h5 class="text-dark text-semibold mb-1 text-center">
+                                    <a class="pointer-a" href="#">
+                                        Microsoft Surface Laptop 3
+                                    </a>
+                                </h5>
+                                <div class="text-center mb-3">
+                                    <strong class="price">₴11 999</strong>
+                                </div>
+                            </div>
+                            <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                                <div class="image-wrapper mb-3">
+                                    <a href="#">
+                                        <img src="/content/products/Dell Inspiron 16 7620 2-in-1 (1).jpg" alt="Product1"
+                                            class="img-fluid rounded product-slider-picture">
+                                    </a>
+                                    <div class="buttons-overlay">
+                                        <a href="#" title="Купити" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" title="Додати в обране" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h5 class="text-dark text-semibold mb-1 text-center">
+                                    <a class="pointer-a" href="#">
+                                        Dell Inspiron 16 7620 2-in-1
+                                    </a>
+                                </h5>
+                                <div class="text-center mb-3">
+                                    <strong class="price">₴12 999</strong>
+                                </div>
+                            </div>
+                            <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                                <div class="image-wrapper mb-3">
+                                    <a href="#">
+                                        <img src="/content/products/Dell Precision 5750 (1).jpg" alt="Product1"
+                                            class="img-fluid rounded product-slider-picture">
+                                    </a>
+                                    <div class="buttons-overlay">
+                                        <a href="#" title="Купити" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" title="Додати в обране" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h5 class="text-dark text-semibold mb-1 text-center">
+                                    <a class="pointer-a" href="#">
+                                        Dell Precision 5750
+                                    </a>
+                                </h5>
+                                <div class="text-center mb-3">
+                                    <strong class="price">₴29 999</strong>
+                                </div>
+                            </div>
+                            <div class="product-card-slider bg-white p-3 w-100 d-flex flex-column">
+                                <div class="image-wrapper mb-3">
+                                    <a href="#">
+                                        <img src="/content/products/Dell Latitude 5511 (1).jpg" alt="Product1"
+                                            class="img-fluid rounded product-slider-picture">
+                                    </a>
+                                    <div class="buttons-overlay">
+                                        <a href="#" title="Купити" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Z" />
+                                            </svg>
+                                        </a>
+                                        <a href="#" title="Додати в обране" class="btn-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                                <path
+                                                    d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h5 class="text-dark text-semibold mb-1 text-center">
+                                    <a class="pointer-a" href="#">
+                                        Dell Latitude 5511
+                                    </a>
+                                </h5>
+                                <div class="text-center mb-3">
+                                    <strong class="price">₴9 999</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="my-pagination" aria-label="Пагінація">
+                        <ul class="my-pagination-list">
+                            <li class="my-page disabled">
+                                <a href="#" class="my-page-link">‹</a>
+                            </li>
+                            <li class="my-page active"><a href="#" class="my-page-link">1</a></li>
+                            <li class="my-page"><a href="#" class="my-page-link">2</a></li>
+                            <li class="my-page"><a href="#" class="my-page-link">3</a></li>
+                            <li class="my-page"><a href="#" class="my-page-link">4</a></li>
+                            <li class="my-page">
+                                <a href="#" class="my-page-link">›</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile menu filters -->
+    <div>
+        <input type="checkbox" id="filter-menu-toggle" hidden>
+
+        <div class="mobile-filters">
+            <label for="filter-menu-toggle" class="filter-close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </label>
+
+            <div class="filters-content">
+                <div class="filters">
+                    <div class="d-flex justify-content-between">
+                        <h2 class="section-title mb-3">Фільтри</h2>
+                        <button class="filter-toggle-btn" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                    <div class="filters-container">
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <input type="checkbox" id="acc10" hidden checked>
+                                <label class="accordion-header" for="acc10">
+                                    Процесори
+                                    <span class="arrow">&#9662;</span>
+                                </label>
+                                <div class="accordion-content">
+                                    <label><input type="checkbox"> Intel Сore i3 (2)</label><br>
+                                    <label><input type="checkbox"> Intel Сore i5 (9)</label><br>
+                                    <label><input type="checkbox"> Intel Core i7 (10)</label><br>
+                                    <label><input type="checkbox"> Intel Core i9 (2)</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <input type="checkbox" id="acc20" hidden checked>
+                                <label class="accordion-header" for="acc20">
+                                    Відеокарта
+                                    <span class="arrow">&#9662;</span>
+                                </label>
+                                <div class="accordion-content">
+                                    <label><input type="checkbox"> Intel UHD (2)</label><br>
+                                    <label><input type="checkbox"> Intel Iris (9)</label><br>
+                                    <label><input type="checkbox"> NVIDIA RTX 3050 (10)</label><br>
+                                    <label><input type="checkbox"> NVIDIA RTX 3060 (2)</label><br>
+                                    <label><input type="checkbox"> NVIDIA RTX 3070 (1)</label><br>
+                                    <label><input type="checkbox"> NVIDIA RTX 4050 (12)</label><br>
+                                    <label><input type="checkbox"> NVIDIA RTX 4060 (2)</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <input type="checkbox" id="acc30" hidden checked>
+                                <label class="accordion-header" for="acc30">
+                                    Накопичувач
+                                    <span class="arrow">&#9662;</span>
+                                </label>
+                                <div class="accordion-content">
+                                    <label><input type="checkbox"> SSD 256 Gb (2)</label><br>
+                                    <label><input type="checkbox"> SSD 500 Gb (9)</label><br>
+                                    <label><input type="checkbox"> SSD 512 Gb (1)</label><br>
+                                    <label><input type="checkbox"> SSD 1 Tb (1)</label><br>
+                                    <label><input type="checkbox"> SSD 10 Tb (10)</label><br>
+                                    <label><input type="checkbox"> SSD 512 Gb + HDD 1 Tb (2)</label><br>
+                                    <label><input type="checkbox"> HDD 1 Tb (1)</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <input type="checkbox" id="acc40" hidden checked>
+                                <label class="accordion-header" for="acc40">
+                                    Наявність
+                                    <span class="arrow">&#9662;</span>
+                                </label>
+                                <div class="accordion-content">
+                                    <label><input type="checkbox"> В наявності(2)</label><br>
+                                    <label><input type="checkbox"> Заброньовано (9)</label><br>
+                                    <label><input type="checkbox"> Відсутнє (1)</label><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <label for="filter-menu-toggle" class="filters-overlay"></label>
+    </div>
+
+
+</body>

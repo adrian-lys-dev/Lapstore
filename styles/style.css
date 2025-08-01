@@ -74,3 +74,29 @@ a:active {
 {
     height: inherit !important;
 }
+
+/* =========================
+    BREADCRUMBS
+========================= */
+
+.breadcrumbs-section {
+    background-color: #ebeef1;
+    padding: 15px 0;
+}
+
+.breadcrumbs a {
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.breadcrumbs span {
+    font-size: 20px;
+    color: #777;
+}
+

@@ -1,0 +1,7 @@
+.benefit-svg {
+    fill: var(--secondary-color);
+}
+
+.benefit-block p {
+    margin: 0;
+}

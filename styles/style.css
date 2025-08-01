@@ -100,3 +100,12 @@ a:active {
     color: #777;
 }
 
+.information-block {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+    height: 100%;
+    text-align: left;
+}

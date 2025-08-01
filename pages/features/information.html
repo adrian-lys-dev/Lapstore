@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/information.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+</head>
+
+    <script>
+        // Add Header
+        fetch('/pages/layout/header.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('afterbegin', html);
+            });
+
+        // Add Footer
+        fetch('/pages/layout/footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
+
+<body>
+
+    <section class="breadcrumbs-section">
+        <div class="main-container">
+            <nav class="breadcrumbs">
+                <a href="#">Головна</a> /
+                <span>Інформація</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="blog-list-section">
+        <div class="main-container pt-3 px-4">
+            <h2 class="section-title mb-6">Інформація</h2>
+    
+            <div class="mb-4">
+                <h4 class="text-secondary">Про нас</h4>
+                <p>
+                    Невеликий магазин (інтернет-магазин) ноутбуків і комп’ютерної техніки. Основна спеціалізація – вживані
+                    ноутбуки з
+                    США преміальних і бізнес серій. Також займаємося ПК, системними блоками, моноблоками, комплектуючими і
+                    запчастинами.
+                    На ринку з 2015 року, краще співвідношення ціна/якість, індивідуальний підхід, сотні задоволених
+                    клієнтів.
+                </p>
+    
+                <h4 class="text-secondary">Наші переваги</h4>
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-2">
+                        <div class="information-block">
+                            <div class="fw-medium">
+                                <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v268q-19-9-39-15.5t-41-9.5v-243H200v560h242q3 22 9.5 42t15.5 38H200Zm0-120v40-560 243-3 280Zm80-40h163q3-21 9.5-41t14.5-39H280v80Zm0-160h244q32-30 71.5-50t84.5-27v-3H280v80Zm0-160h400v-80H280v80ZM720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Zm-20-80h40v-100h100v-40H740v-100h-40v100H600v40h100v100Z"/></svg>
+                                Гарантія 3 місяці
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-2">
+                        <div class="information-block">
+                            <div class="fw-medium">
+                                <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M440-440ZM120-120q-33 0-56.5-23.5T40-200v-480q0-33 23.5-56.5T120-760h126l74-80h240v80H355l-73 80H120v480h640v-360h80v360q0 33-23.5 56.5T760-120H120Zm640-560v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80ZM440-260q75 0 127.5-52.5T620-440q0-75-52.5-127.5T440-620q-75 0-127.5 52.5T260-440q0 75 52.5 127.5T440-260Zm0-80q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Z"/></svg>
+                                Реальні фото товару
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-2">
+                        <div class="information-block">
+                            <div class="fw-medium">
+                                <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M280-160q-50 0-85-35t-35-85H60l18-80h113q17-19 40-29.5t49-10.5q26 0 49 10.5t40 29.5h167l84-360H182l4-17q6-28 27.5-45.5T264-800h456l-37 160h117l120 160-40 200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H400q0 50-35 85t-85 35Zm357-280h193l4-21-74-99h-95l-28 120Zm-19-273 2-7-84 360 2-7 34-146 46-200ZM20-427l20-80h220l-20 80H20Zm80-146 20-80h260l-20 80H100Zm180 333q17 0 28.5-11.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 17 11.5 28.5T280-240Zm400 0q17 0 28.5-11.5T720-280q0-17-11.5-28.5T680-320q-17 0-28.5 11.5T640-280q0 17 11.5 28.5T680-240Z"/></svg>
+                                Швидке відправлення
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-2">
+                        <div class="information-block">
+                            <div class="fw-medium">
+                                <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-260q68 0 123.5-38.5T684-400H276q25 63 80.5 101.5T480-260ZM312-520l44-42 42 42 42-42-84-86-86 86 42 42Zm250 0 42-42 44 42 42-42-86-86-84 86 42 42ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
+                                99% задоволених покупців
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-2">
+                        <div class="information-block">
+                            <div class="fw-medium">
+                                <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440h80q0 117 81.5 198.5T480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720h-6l62 62-56 58-160-160 160-160 56 58-62 62h6q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Z"/></svg>
+                                3 дні на повернення
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-2">
+                        <div class="information-block">
+                            <div class="fw-medium">
+                                <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M160-640h640v-80H160v80Zm-80-80q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v240H160v240h164v80H160q-33 0-56.5-23.5T80-240v-480ZM598-80 428-250l56-56 114 112 226-226 56 58L598-80ZM160-720v480-180 113-413Z"/></svg>
+                                Оплата кредитною картою
+                            </div>
+                        </div>
+                    </div>    
+    
+                </div>
+            </div>
+
+
+            <div class="row g-4">
+            
+                <div class="col-12 col-lg-4 mb-2">
+                    <div class="benefit-block">
+                        <h5 class="text-secondary">
+                            <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M280-160q-50 0-85-35t-35-85H60l18-80h113q17-19 40-29.5t49-10.5q26 0 49 10.5t40 29.5h167l84-360H182l4-17q6-28 27.5-45.5T264-800h456l-37 160h117l120 160-40 200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H400q0 50-35 85t-85 35Zm357-280h193l4-21-74-99h-95l-28 120Zm-19-273 2-7-84 360 2-7 34-146 46-200ZM20-427l20-80h220l-20 80H20Zm80-146 20-80h260l-20 80H100Zm180 333q17 0 28.5-11.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 17 11.5 28.5T280-240Zm400 0q17 0 28.5-11.5T720-280q0-17-11.5-28.5T680-320q-17 0-28.5 11.5T640-280q0 17 11.5 28.5T680-240Z"/></svg>
+                            Оплата і доставка
+                        </h5>
+                        <p><strong>При покупці в магазині оплата відбувається:</strong></p>
+                        <ul class="px-4">
+                            <li>готівкою</li>
+                            <li>картою банку через термінал</li>
+                            <li>миттєва розстрочка (ПриватБанк)</li>
+                            <li>безготівковий розрахунок</li>
+                        </ul>
+                        <p><strong>При покупці в іншому місті:</strong></p>
+                        <ul class="px-4">
+                            <li>післяплата (з передоплатою 100–300 грн)</li>
+                            <li>доставка OLX</li>
+                            <li>розстрочка від ПриватБанку</li>
+                            <li>безготівковий розрахунок</li>
+                            <li>повна оплата на картку</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="col-12 col-lg-4 mb-2">
+                    <div class="benefit-block">
+                        <h5 class="text-secondary">
+                            <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v268q-19-9-39-15.5t-41-9.5v-243H200v560h242q3 22 9.5 42t15.5 38H200Zm0-120v40-560 243-3 280Zm80-40h163q3-21 9.5-41t14.5-39H280v80Zm0-160h244q32-30 71.5-50t84.5-27v-3H280v80Zm0-160h400v-80H280v80ZM720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Zm-20-80h40v-100h100v-40H740v-100h-40v100H600v40h100v100Z"/></svg>
+                            Гарантія
+                        </h5>
+                        <p>
+                            Ноутбуки вживані, гарантії від виробника немає. Ми надаємо 3 місяці гарантії від магазину. Якщо протягом
+                            цього терміну немає нарікань або прихованих дефектів — товар вважається повністю працездатним.
+                            <br>Гарантія не покриває пошкодження, спричинені користувачем.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="col-12 col-lg-4 mb-2">
+                    <div class="benefit-block">
+                        <h5 class="text-secondary">
+                            <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M640-520v-120H520v-80h120v-120h80v120h120v80H720v120h-80Zm158 400q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+                            Контакти
+                        </h5>
+                        <ul class="mb-2 px-4">
+                            <li><strong>Vodafone:</strong> 099 425 66 85</li>
+                            <li><strong>Kyivstar:</strong> 096 886 42 73</li>
+                            <li><strong>Telegram:</strong> 096 886 42 73</li>
+                            <li><strong>Viber:</strong> 096 886 42 73</li>
+                            <li><strong>E-mail:</strong> <a href="mailto:sales@lapstore.com.ua">sales@lapstore.com.ua</a></li>
+                        </ul>
+                        <h5 class="text-secondary">
+                            <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>
+                            Графік роботи
+                        </h6>
+                        <ul class="px-4">
+                            <li>Пн–Пт: 10:00–17:00</li>
+                            <li>Субота: 11:00–15:00</li>
+                            <li>Неділя: вихідний</li>
+                        </ul>
+                        <h5 class="text-secondary mt-3">
+                            <svg class="benefit-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M160-720v-80h640v80H160Zm0 560v-240h-40v-80l40-200h640l40 200v80h-40v240h-80v-240H560v240H160Zm80-80h240v-160H240v160Zm-38-240h556-556Zm0 0h556l-24-120H226l-24 120Z"/></svg>
+                            Адреса
+                        </h6>
+                        <p>
+                            м. Харків, пр. Аерокосмічний 52<br>
+                            Район пішохідного моста, супермаркет “Таврія В”<br>
+                            Від м. Левада — 10–12 хв пішки
+                        </p>
+                    </div>
+                </div>       
+            
+            </div>
+
+            <div class="row" style="margin: 0;">
+                <div class="col-12 col-lg-10 d-flex flex-column mb-2" style="height: 450px; padding: 0;">
+                    <h4 class="text-secondary mb-2">Карта до нас</h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d6199.322978415977!2d36.24624773685364!3d49.97845692425555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m5!1s0x4127a1a3c73f0e8f%3A0xe072cb242417cd74!2zTGFwc3RvcmUg0J3QvtGD0YLQsdGD0LrQuCDQuCDQutC-0LzQvyfRjtGC0LXRgNC90LAg0YLQtdGF0L3QuNC60LAsIEFlcm9rb3NtaWNobnlpIEF2ZSwgNTIsIEtoYXJraXYsIEtoYXJraXYgT2JsYXN0LCA2MTE0MA!3m2!1d49.975631899999996!2d36.2534814!4m3!3m2!1d49.9810278!2d36.243195!5e0!3m2!1sen!2sua!4v1753872455848!5m2!1sen!2sua"
+                        style="border:0; flex-grow: 1;" width="100%" height="100%" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="col-12 col-lg-2 d-flex flex-column" style="height: 450px; padding: 0;">
+                    <video controls style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="/content/video/Shop_entrance.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+
+
+            <div class="row g-3 mb-4 mt-2">
+                <div class="col-12 col-lg-6 mb-2">
+                    <img src="/content/pictures/1.jpg" alt="picture1" class="img-fluid w-100">
+                </div>
+                <div class="col-12 col-lg-6 mb-2">
+                    <img src="/content/pictures/5.jpg" alt="picture2" class="img-fluid w-100">
+                </div>
+            </div>
+
+    
+        </div>
+    </section>
+
+</body>

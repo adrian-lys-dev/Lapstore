@@ -21,6 +21,13 @@ body {
   font-family: 'Exo 2', sans-serif !important;
 }
 
+.btn-close:focus,
+.btn-close:active,
+.btn-close:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .main-container {
   max-width: 1600px;
   margin: 0 auto;

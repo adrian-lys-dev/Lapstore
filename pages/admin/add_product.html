@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sidebar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/admin/admin-style.css">
+    <link rel="stylesheet" href="/styles/admin/add_product.css">
+
+</head>
+
+<body>
+
+    <script>
+        // Sidebar
+        fetch('/pages/layout/sidebar.html')
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML('afterbegin', html);
+            });
+    </script>
+
+    <div class="content">
+        <div class="p-2">
+            <div class="row align-items-center">
+                <div class="col-12 col-sm-8">
+                    <h2>Додати продукт</h2>
+                    <p class="text-muted">Будь ласка, заповніть усі поля, щоб опублікувати товар</p>
+                </div>
+                <div class="col-12 col-sm-4 mb-2">
+                    <button type="button" class="btn btn-success w-100">Опублікувати</button>
+                </div>
+            </div>
+
+            <div class="row">
+                
+                <!-- Left Column -->
+                <div class="col-lg-8">
+                    <div class="form-section mb-4">
+                        <h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-280h560v-80H200v80Zm0-160h560v-80H200v80Zm0-160h400v-80H200v80Zm-40 440q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z"/></svg>
+                            Базова інформація
+                        </h5>
+                        <hr>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="productName" placeholder="Введіть назву продукту" />
+                                    <label for="productName">Назва продукту</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Введіть опис продукту..." id="productDescription" style="height: 200px;"></textarea>
+                                    <label for="productDescription">Опис</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-section mb-4">
+                        <h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M320-320h480v-400H320v400Zm0 80q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+                            Інформація SEO
+                        </h5>
+                        <hr>
+                        <p class="text-muted">Визначте, як ваш запис має виглядати в результатах пошуку.</p>
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="seoKeyword" placeholder="Введіть фокусне слово" />
+                            <label for="seoKeyword">Фокусне ключове слово</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="seoTitle" placeholder="Заголовок, сторінка, роздільник, назва сайту" />
+                            <label for="seoTitle">SEO-Заголовок</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="seoSlug" placeholder="Формується частина посилання на основі SEO-заголовку" />
+                            <label for="seoSlug">Частина посилання</label>
+                        </div>
+
+                        <div class="form-floating">
+                            <textarea class="form-control" id="seoDescription" placeholder="Опис для пошукових систем" style="height: 150px;"></textarea>
+                            <label for="seoDescription">Мета-опис</label>
+                        </div>
+                    </div>
+
+                    <div class="form-section mb-4">
+                        <h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M610-210q12 0 21-9t9-21q0-12-9-21t-21-9q-12 0-21 9t-9 21q0 12 9 21t21 9Zm110 0q12 0 21-9t9-21q0-12-9-21t-21-9q-12 0-21 9t-9 21q0 12 9 21t21 9Zm110 0q12 0 21-9t9-21q0-12-9-21t-21-9q-12 0-21 9t-9 21q0 12 9 21t21 9Zm-630 90q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v268q-19-9-39-15.5t-41-9.5v-243H200v560h242q3 22 9.5 42t15.5 38H200Zm0-120v40-560 243-3 280Zm80-40h163q3-21 9.5-41t14.5-39H280v80Zm0-160h244q32-30 71.5-50t84.5-27v-3H280v80Zm0-160h400v-80H280v80ZM720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Z"/></svg>
+                            Додаткові дані товару
+                        </h5>
+                        <hr>
+                        <p class="text-muted">Визначте ціну</p>
+                        <div class="form-floating mb-2">
+                            <input type="number" class="form-control" id="priceId" placeholder="Введіть звичайну ціну" min="0"/>
+                            <label for="priceId">Звичайна ціна (грн)</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="number" class="form-control" id="priceDiscount" placeholder="Введіть ціну зі знижкою" min="0"/>
+                            <label for="priceDiscount">Ціна зі знижкою (грн)</label>
+                        </div>
+                        <hr>
+                        <p class="text-muted">Визначте наявність товару</p>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="avalability" checked />
+                            <label class="form-check-label">Є в наявності</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="avalability" />
+                            <label class="form-check-label">Немає в наявності</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="avalability" />
+                            <label class="form-check-label">Під замовлення</label>
+                        </div>  
+                    </div>
+
+                    <div class="form-section mb-6">
+                        <h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M520-600v-80h120v-160h80v160h120v80H520Zm120 480v-400h80v400h-80Zm-400 0v-160H120v-80h320v80H320v160h-80Zm0-320v-400h80v400h-80Z"/></svg>
+                            Атрибути товару
+                        </h5>
+                        <hr>
+                        <p class="text-muted">Додайте атрибути товару</p>
+                        <div class="d-flex">
+                            <select class="form-select" style="border-top-right-radius: 0; border-bottom-right-radius: 0;">
+                                <option selected disabled>Атрибут</option>
+                                <option value="1">Процесор</option>
+                                <option value="2">Пам'ять</option>
+                            </select>
+                            <button type="submit" class="btn btn-outline-primary"
+                                style="border-top-left-radius: 0; border-bottom-left-radius: 0;">
+                                Додати
+                            </button>
+                        </div>
+                        <hr>
+                        <div class="border rounded p-3 mb-2">
+                            <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
+                                <h6 class="mb-0">Процесор</h6>
+                                <a href="#" class="text-danger text-decoration-none" style="cursor:pointer;" aria-label="Видалити">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FF0000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                                </a>
+                            </div>
+                            <span class="badge bg-secondary d-inline-flex align-items-center me-2 mb-2">
+                                Intel Core i7
+                                <a href="#" class="text-white ms-2" style="text-decoration:none; cursor:pointer;">x</a>
+                            </span>
+                        </div>
+                        <div class="border rounded p-3">
+                            <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
+                                <h6 class="mb-0">Накопичувані</h6>
+                                <a href="#" class="text-danger text-decoration-none" style="cursor:pointer;" aria-label="Видалити">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FF0000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                                </a>
+                            </div>
+                            <span class="badge bg-secondary d-inline-flex align-items-center me-2 mb-2">
+                                SSD 512 GB
+                                <a href="#" class="text-white ms-2" style="text-decoration:none; cursor:pointer;">x</a>
+                            </span>
+                            <span class="badge bg-secondary d-inline-flex align-items-center me-2 mb-2">
+                                HDD 1 TB
+                                <a href="#" class="text-white ms-2" style="text-decoration:none; cursor:pointer;">x</a>
+                            </span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="sidebar-section mb-4">
+                        <h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-392q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q141 0 257.5 76T912-520h-91q-52-93-143-146.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q20 0 40-2t40-6v81q-20 3-40 5t-40 2Zm0-120q22 0 42.5-5t38.5-14q5-50 31.5-90t67.5-64v-7q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm-5-180Zm205 380q-17 0-28.5-11.5T640-160v-120q0-17 11.5-28.5T680-320v-40q0-33 23.5-56.5T760-440q33 0 56.5 23.5T840-360v40q17 0 28.5 11.5T880-280v120q0 17-11.5 28.5T840-120H680Zm40-200h80v-40q0-17-11.5-28.5T760-400q-17 0-28.5 11.5T720-360v40Z"/></svg>
+                            Видимість
+                        </h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="visibility" checked />
+                            <label class="form-check-label">Опубліковано</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="visibility" />
+                            <label class="form-check-label">Архів</label>
+                        </div>
+                        <label class="form-label">Дата публікації</label>
+                        <input type="date" class="form-control" value="2023-10-08" />
+                    </div>
+
+                    <div class="sidebar-section mb-4">
+                        <h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h440q19 0 36 8.5t28 23.5l216 288-216 288q-11 15-28 23.5t-36 8.5H160Zm0-80h440l180-240-180-240H160v480Zm220-240Z"/></svg>
+                            Категорія
+                        </h6>
+                        <div style="max-height: 200px; overflow-y: auto; padding: 0.5rem;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="laptop" id="categoryLaptop">
+                                <label class="form-check-label" for="categoryLaptop">Ноутбуки</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="gamingLaptop" id="categoryGamingLaptop">
+                                <label class="form-check-label" for="categoryGamingLaptop">Ігрові ноутбуки</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="PC" id="categoryPC">
+                                <label class="form-check-label" for="categoryPC">ПК</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="gamingPC" id="categoryGamingPC">
+                                <label class="form-check-label" for="categoryGamingPC">Ігрові ПК</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="miniPC" id="categoryminiPC">
+                                <label class="form-check-label" for="categoryminiPC">МініПК</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="accessories " id="categoryAccessories">
+                                <label class="form-check-label" for="categoryAccessories">Аксесуари</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="tablet" id="categoryTablet">
+                                <label class="form-check-label" for="categoryTablet">Планшети</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="apple" id="categoryApple">
+                                <label class="form-check-label" for="categoryApple">Техніка Apple</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="diffent" id="categoryDiffent">
+                                <label class="form-check-label" for="categoryDiffent">Інше</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section mb-4">
+                        <h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m159-168-34-14q-31-13-41.5-45t3.5-63l72-156v278Zm160 88q-33 0-56.5-23.5T239-160v-240l106 294q3 7 6 13.5t8 12.5h-40Zm206-4q-32 12-62-3t-42-47L243-622q-12-32 2-62.5t46-41.5l302-110q32-12 62 3t42 47l178 488q12 32-2 62.5T827-194L525-84Zm-86-476q17 0 28.5-11.5T479-600q0-17-11.5-28.5T439-640q-17 0-28.5 11.5T399-600q0 17 11.5 28.5T439-560Zm58 400 302-110-178-490-302 110 178 490ZM319-650l302-110-302 110Z"/></svg>
+                            Теги
+                        </h6>
+                        <div style="max-height: 200px; overflow-y: auto; padding: 0.5rem;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="office" id="officeTag">
+                                <label class="form-check-label" for="officeTag">Офісна робота</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="photoWork" id="photoWorkTag">
+                                <label class="form-check-label" for="photoWorkTag">Робота з фото</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="study" id="studyTag">
+                                <label class="form-check-label" for="studyTag">Для навчання</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="compact" id="compactTag">
+                                <label class="form-check-label" for="compactTag">Компактний</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="batteryLife" id="batteryLifeTag">
+                                <label class="form-check-label" for="batteryLifeTag">Тривалий час роботи</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="designWork" id="designWorkTag">
+                                <label class="form-check-label" for="designWorkTag">Графічний дизайн</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="programming" id="programmingTag">
+                                <label class="form-check-label" for="programmingTag">Програмування</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="touchscreen" id="touchscreenTag">
+                                <label class="form-check-label" for="touchscreenTag">Сенсорний екран</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section mb-4">
+                        <h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m352-522 86-87-56-57-44 44-56-56 43-44-45-45-87 87 159 158Zm328 329 87-87-45-45-44 43-56-56 43-44-57-56-86 86 158 159Zm24-567 57 57-57-57ZM290-120H120v-170l175-175L80-680l200-200 216 216 151-152q12-12 27-18t31-6q16 0 31 6t27 18l53 54q12 12 18 27t6 31q0 16-6 30.5T816-647L665-495l215 215L680-80 465-295 290-120Zm-90-80h56l392-391-57-57-391 392v56Zm420-419-29-29 57 57-28-28Z"/></svg>
+                            Додаткові послуги товару
+                        </h6>
+                        <div style="max-height: 200px; overflow-y: auto; padding: 0.5rem;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ssdNvme256" id="ssdNvme256Service">
+                                <label class="form-check-label" for="ssdNvme256Service">Додати SSD NVMe 256 GB</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ssdNvme512" id="ssdNvme512Service">
+                                <label class="form-check-label" for="ssdNvme512Service">Додати SSD NVMe 512 GB</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ramUpgrade8" id="ramUpgrade8Service">
+                                <label class="form-check-label" for="ramUpgrade8Service">Розширення ОЗП на 8 GB</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ramUpgrade16" id="ramUpgrade16Service">
+                                <label class="form-check-label" for="ramUpgrade16Service">Розширення ОЗП на 16 GB</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="externalMouse" id="externalMouseService">
+                                <label class="form-check-label" for="externalMouseService">Миша в комплект</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="notebookBag" id="notebookBagService">
+                                <label class="form-check-label" for="notebookBagService">Сумка для ноутбука</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="warranty3" id="warranty3Service">
+                                <label class="form-check-label" for="warranty3Service">Гарантія 3 міс. від магазину</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="warranty6" id="warranty6Service">
+                                <label class="form-check-label" for="warranty6Service">Гарантія 6 міс. від магазину</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="warranty12" id="warranty12Service">
+                                <label class="form-check-label" for="warranty12Service">Гарантія 12 міс. від магазину</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="sidebar-section mb-4">
+                        <h6>Головне зображення продукту</h6>
+                        <button type="button" class="btn btn-primary w-100">
+                            Завантажити файл
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M440-200h80v-167l64 64 56-57-160-160-160 160 57 56 63-63v167ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                        </button>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h6>Галерея зображень</h6>
+                        <button type="button" class="btn btn-primary w-100">
+                            Завантажити файли
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M440-200h80v-167l64 64 56-57-160-160-160 160 57 56 63-63v167ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                        </button>
+                    </div>
+          
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

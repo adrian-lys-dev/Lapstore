@@ -1,0 +1,284 @@
+:root {
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 60px;
+    --light-text-color: #f0f0f0f0;
+    --dark-text-color: #000;
+    --secondary-color: #62d6e8;
+    --secondary-interface-color: #283444;
+}
+
+/* === General styles === */
+body {
+    margin: 0;
+}
+
+#menu-toggle,
+#collapse-toggle {
+    display: none;
+}
+
+/* === Sidebar === */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #1d2327;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* === Navigation links === */
+.sidebar .nav-link {
+    color: var(--light-text-color);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.sidebar .nav-link span {
+    margin-left: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar .nav-link svg {
+    width: 24px;
+    text-align: center;
+    fill: var(--light-text-color);
+}
+
+.sidebar .nav-link:hover {
+    color: var(--secondary-color);
+    background-color: var(--secondary-interface-color);
+}
+
+.sidebar .nav-link:hover svg {
+    fill: var(--secondary-color);
+}
+
+/* === Collapse button === */
+.collapse-btn {
+    background: none;
+    border: none;
+    color: var(--light-text-color);
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.collapse-btn svg {
+    width: 24px;
+    text-align: center;
+    margin-right: 10px;
+    fill: var(--light-text-color);
+    transition: transform 0.3s ease;
+}
+
+/* === Submenu === */
+.has-submenu input[type="checkbox"] {
+    display: none;
+}
+
+.submenu-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    color: var(--light-text-color);
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.arrow-icon {
+    display: inline-block;
+    fill: var(--light-text-color);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 0;
+    background-color: #2c3338;
+}
+
+.submenu li {
+    list-style-type: none;
+}
+
+.submenu .nav-link {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    display: block;
+}
+
+.submenu .nav-link span {
+    margin-left: 0;
+    transition: opacity 0.3s ease;
+}
+
+.submenu .nav-link:hover {
+    color: var(--secondary-color);
+    background-color: var(--secondary-interface-color);
+    border-radius: 4px;
+}
+
+.has-submenu input[type="checkbox"]:checked ~ .submenu {
+    max-height: 500px;
+}
+
+.has-submenu input[type="checkbox"]:checked + .submenu-label .arrow-icon {
+    transform: rotate(90deg);
+}
+
+/* === Content === */
+.content {
+    margin-left: var(--sidebar-width);
+    padding: 1rem;
+    transition: margin-left 0.3s ease;
+}
+
+/* === Hide/Collapse Sidebar === */
+#collapse-toggle:checked ~ .sidebar {
+    width: var(--sidebar-collapsed-width);
+}
+
+#collapse-toggle:checked ~ .sidebar .nav-link span {
+    display: none;
+}
+
+#collapse-toggle:checked ~ .sidebar .collapse-btn svg {
+    transform: rotate(180deg);
+}
+
+#collapse-toggle:checked ~ .content {
+    margin-left: var(--sidebar-collapsed-width);
+}
+
+
+/* === Menu icon and overlay === */
+.top-bar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color: #f8f9fa;
+    align-items: center;
+    padding: 0 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+}
+
+.menu-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+
+.close-btn {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #587a84;
+    transition: background-color 0.2s ease;
+}
+
+.close-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--light-text-color);
+}
+
+.overlay {
+    display: none;
+}
+
+/* === Responsive version (768px and less) === */
+@media (max-width: 768px) {
+
+    .top-bar {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    #menu-toggle:checked ~ .sidebar {
+        transform: translateX(0);
+    }
+
+    .close-btn {
+        display: flex;
+    }
+
+    .content {
+        margin-left: 0 !important;
+        padding-top: 60px;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+    }
+
+    #menu-toggle:checked ~ .overlay {
+        display: block;
+    }
+}
+
+hr {
+    margin: 0.5rem 0;
+}
+
+.stat-card {
+    border-left: 8px solid #0d6efd;
+    border-radius: 0.75rem;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.stat-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.sidebar-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}

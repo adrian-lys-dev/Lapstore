@@ -1,0 +1,10 @@
+.fixed-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+td p {
+  margin: 0;
+  line-height: 1.2;
+}
